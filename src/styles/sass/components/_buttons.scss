@@ -1,0 +1,22 @@
+.btn-outline-google {
+  color: $google !important;
+  background: $white !important;
+
+  &:hover {
+    color: darken($google, 20%) !important;
+    border-color: darken($google, 20%) !important;
+  }
+}
+
+.bnt-menu {
+  width: auto;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  padding: 0.4rem;
+  background-color: $light;
+
+  &.active {
+    background-color: $primary;
+    color: #fff;
+  }
+}

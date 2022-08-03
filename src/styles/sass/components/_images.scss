@@ -1,0 +1,21 @@
+.login-image {
+  width: 400px;
+
+  @include media-breakpoint-down(md) {
+    width: 260px;
+  }
+}
+
+.no-results-img-lg {
+  width: 30%;
+  @include media-breakpoint-down(md) {
+    width: 80%;
+  }
+}
+
+.no-results-img-md {
+  width: 40%;
+  @include media-breakpoint-down(md) {
+    width: 80%;
+  }
+}

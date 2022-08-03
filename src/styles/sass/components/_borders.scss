@@ -1,0 +1,82 @@
+@each $name, $value in $theme-colors {
+  .border-bottom-#{$name} {
+    border-bottom: 1px solid $value !important;
+  }
+  .border-bottom-2-#{$name} {
+    border-bottom: 2px solid $value !important;
+  }
+}
+
+.full-rounded {
+  border-radius: 50px !important;
+}
+
+.rounded-full-05px {
+  border-radius: 05px !important;
+}
+
+.rounded-full-10px {
+  border-radius: 10px !important;
+}
+
+.rounded-top-10px {
+  border-radius: 10px 10px 0 0 !important;
+}
+
+.rounded-bottom-10px {
+  border-radius: 0 0 10px 10px !important;
+}
+
+.rounded-right-10px {
+  border-radius: 0 10px 10px 0 !important;
+}
+
+.rounded-left-30px {
+  border-radius: 30px 0 0 30px !important;
+}
+
+.rounded-bottom-right-10px {
+  border-radius: 0 0 10px 0 !important;
+}
+
+.rounded-top-menu {
+  border-radius: 28px 28px 0 0 !important;
+}
+
+.rounded-bottom-menu {
+  border-radius: 0 0 28px 28px !important;
+}
+
+.border-left {
+  &-2 {
+    border-left: 2px solid !important;
+  }
+}
+
+.rounded-0-sm-only {
+  @include media-breakpoint-down(md) {
+    border-radius: 0 !important;
+  }
+}
+
+.border-bottom-left-radius {
+  position: absolute;
+  left: -26px;
+  height: 98px;
+  bottom: -20px;
+
+  @include media-breakpoint-down(md) {
+    left: -5px;
+  }
+}
+
+.border-top-right-radius {
+  position: absolute;
+  top: -10px;
+  right: 49%;
+  height: 98px;
+
+  @include media-breakpoint-down(md) {
+    right: 48%;
+  }
+}

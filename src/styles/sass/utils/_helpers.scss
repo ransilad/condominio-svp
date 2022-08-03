@@ -1,0 +1,71 @@
+html, body {
+  font-family: 'Ubuntu', serif;
+}
+
+.min-h-100 {
+  min-height: 100%;
+}
+
+.full-height-home {
+  min-height: calc(100vh - 143px);
+}
+
+.full-height-home-menu {
+  height: calc(100vh - 301px);
+  overflow: auto;
+}
+
+.full-height-communities {
+  height: calc(100vh - 70px);
+  overflow: auto;
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
+.react-confirm-alert-overlay {
+  z-index: 10000 !important;
+}
+
+.w-max-content {
+  width: max-content;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.h-48px {
+  height: 48px;
+}
+
+.w-10px {
+  width: 10px !important;
+}
+
+.w-fit-content {
+  width: fit-content;
+}
+
+.min-h-100 {
+    min-height: 100vh;
+}
+
+.w-message-dm {
+  max-width: 80%;
+
+  @include media-breakpoint-down(md) {
+    max-width: 100%;
+  }
+}
+
+.infinite-scroll-component  {
+  overflow: unset !important;
+}

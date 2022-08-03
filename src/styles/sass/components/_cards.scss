@@ -1,0 +1,65 @@
+.custom-card {
+  @extend .bg-white;
+  @extend .p-4;
+
+  border-radius: 20px;
+
+  &.compact {
+    @extend .p-3;
+    border-radius: 10px;
+  }
+}
+
+.card-parking {
+  position: absolute;
+  width: 29.3%;
+  height: 17%;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $light;
+  }
+
+  &.parking-1 {
+    top: 41.3%;
+    right: 3.6%;
+  }
+
+  &.parking-2 {
+    top: 64.3%;
+    right: 3.6%;
+  }
+
+  &.parking-3 {
+    top: 64.3%;
+    left: 3.6%;
+  }
+
+  &.parking-4 {
+    top: 41.3%;
+    left: 3.6%;
+  }
+
+  &.parking-5 {
+    top: 19.3%;
+    left: 3.6%;
+  }
+}
+
+.right-0 {
+  right: 0;
+}
+
+.card-install-pwa {
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+}

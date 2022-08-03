@@ -1,0 +1,13 @@
+$google: #dd4b39;
+$light: #eef2f5;
+$primary: #7526ea;
+$secondary: #22263b;
+
+$theme-colors: (
+  "light": $light,
+  "primary": $primary,
+  "secondary": $secondary,
+  "google": $google,
+);
+
+@import "../../../../node_modules/bootstrap";
