@@ -39,10 +39,8 @@ function PageContainer({ page }) {
 
     useEffect(() => {
         if (prompt) {
-            console.log('Pasa 1');
             setVisibleState(true);
         }
-        console.log('Pasa 2');
     }, [prompt])
 
     useEffect(() => {
@@ -82,7 +80,7 @@ function PageContainer({ page }) {
                                             </div>
                                             <div className="row m-0">
                                                 <Priorities me={me}/>
-                                                <AdministrativeStaff />
+                                                <AdministrativeStaff me={me}/>
                                             </div>
                                         </>
                                     )}
