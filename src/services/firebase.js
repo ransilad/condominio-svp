@@ -10,13 +10,13 @@ import {
 } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDfbLGR0FS1DjnwMUJCr-ajZouoIui56wM",
-  authDomain: "condominio-svp-testing.firebaseapp.com",
-  databaseURL: "https://condominio-svp-testing-default-rtdb.firebaseio.com",
-  projectId: "condominio-svp-testing",
-  storageBucket: "condominio-svp-testing.appspot.com",
-  messagingSenderId: "169642749712",
-  appId: "1:169642749712:web:084f520c3c368364b9ff95",
+  apiKey: "AIzaSyAuPHkqum2rJ_BRMiCmSaBpHWxt1G7Z9bY",
+  authDomain: "condominio-svp.firebaseapp.com",
+  databaseURL: "https://condominio-svp-default-rtdb.firebaseio.com",
+  projectId: "condominio-svp",
+  storageBucket: "condominio-svp.appspot.com",
+  messagingSenderId: "688557616312",
+  appId: "1:688557616312:web:5319940897f302b9f3d84d",
 };
 
 const app = initializeApp(firebaseConfig);

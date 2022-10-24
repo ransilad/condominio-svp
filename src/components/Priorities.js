@@ -5,6 +5,12 @@ import {Tooltip} from "./Tooltip";
 import NoResults from "./NoResults";
 import ToastSuccess from "./ToastSuccess";
 
+import { ReactComponent as UpIcon } from '../components/icons/upIcon.svg';
+import { ReactComponent as DownIcon } from '../components/icons/downIcon.svg';
+import { ReactComponent as CheckIcon } from '../components/icons/checkIcon.svg';
+import { ReactComponent as EditIcon } from '../components/icons/editIcon.svg';
+import { ReactComponent as CloseIcon } from '../components/icons/closeIcon.svg';
+
 const Priorities = ({me}) => {
     const [priorities, setPriorities] = useState([]);
     const [note, setNote] = useState('');
@@ -141,22 +147,48 @@ const Priorities = ({me}) => {
                                     <div className="col-auto ms-auto cursor-pointer mt-2">
                                         {index > 0 && (
                                             <Tooltip text="Subir prioridad">
-                                                <i className="icon-close-arrow text-primary" onClick={() => updateOrder(index, 'up')}/>
+                                                <UpIcon
+                                                    width={30}
+                                                    height={30}
+                                                    onClick={() => updateOrder(index, 'up')}
+                                                    fill='#7526ea'
+                                                />
                                             </Tooltip>
                                         )}
                                         {index + 1 < priorities.length && (
                                             <Tooltip text="Bajar prioridad">
-                                                <i className="icon-open-arrow text-primary ms-3" onClick={() => updateOrder(index, 'down')}/>
+                                                <DownIcon
+                                                    width={30}
+                                                    height={30}
+                                                    onClick={() => updateOrder(index, 'down')}
+                                                    fill='#7526ea'
+                                                />
                                             </Tooltip>
                                         )}
                                         <Tooltip text="Completar actividad">
-                                            <i className="icon-check text-success ms-3" onClick={() => updateStatusItem(index, 'Completada')}/>
+                                            <CheckIcon
+                                                width={30}
+                                                height={30}
+                                                onClick={() => updateStatusItem(index, 'Completada')}
+                                                fill='#4BB543'
+                                            />
                                         </Tooltip>
                                         <Tooltip text="Editar actividad">
-                                            <i className="icon-edit text-info ms-3" onClick={() => handleSetItemToEdit(index)}/>
+                                            <EditIcon
+                                                width={20}
+                                                height={20}
+                                                onClick={() => handleSetItemToEdit(index)}
+                                                fill='#0dcaf0'
+                                                style={{marginRight: 5}}
+                                            />
                                         </Tooltip>
                                         <Tooltip text="Cancelar actividad">
-                                            <i className="icon-close text-danger ms-3" onClick={() => updateStatusItem(index, 'Cancelada')}/>
+                                            <CloseIcon
+                                                width={20}
+                                                height={20}
+                                                onClick={() => updateStatusItem(index, 'Cancelada')}
+                                                fill='#bb2124'
+                                            />
                                         </Tooltip>
                                     </div>
                                 )}

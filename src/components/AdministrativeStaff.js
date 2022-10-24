@@ -3,6 +3,7 @@ import { ref, onValue, set } from "firebase/database";
 
 import { db } from "../services/firebase";
 import {Tooltip} from "./Tooltip";
+import { ReactComponent as EditIcon } from '../components/icons/editIcon.svg';
 
 const AdministrativeStaff = ({ me }) => {
     const [staff, setStaff] = useState({});
@@ -53,7 +54,12 @@ const AdministrativeStaff = ({ me }) => {
                 {!isEditing && me.rol === 'admin' && (
                     <div className="col-auto ms-auto">
                         <Tooltip text="Editar información">
-                            <i className="icon-edit p-2 text-info cursor-pointer" onClick={() => setIsEditing(!isEditing)}/>
+                            <EditIcon
+                                width={20}
+                                height={20}
+                                onClick={() => setIsEditing(!isEditing)}
+                                fill='#0dcaf0'
+                            />
                         </Tooltip>
                     </div>
                 )}

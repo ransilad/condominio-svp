@@ -16,6 +16,8 @@ import Files from "../components/Files";
 import Users from "../components/Users";
 import {useAddToHomescreenPrompt} from "../components/useAddToHomescreenPrompt";
 
+import { ReactComponent as CloseIcon } from '../components/icons/closeIcon.svg';
+
 function PageContainer({ page }) {
     const [user, loading] = useAuthState(auth);
     const [prompt, promptToInstall] = useAddToHomescreenPrompt();
@@ -126,7 +128,12 @@ function PageContainer({ page }) {
                             <div className="col-12 p-0">
                                 <div className="row">
                                     <div className="col-auto d-flex align-items-center pe-0 cursor-pointer">
-                                        <i className="icon-close" onClick={() => setVisibleState(false)} />
+                                        <CloseIcon
+                                            width={20}
+                                            height={20}
+                                            onClick={() => setVisibleState(false)}
+                                            fill='#bb2124'
+                                        />
                                     </div>
                                     <div className="col d-flex align-items-center flex-column px-0">
                                         <strong>Condominio SVP 4444</strong>

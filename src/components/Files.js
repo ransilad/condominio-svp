@@ -4,6 +4,7 @@ import { db } from "../services/firebase";
 import {Tooltip} from "./Tooltip";
 import NoResults from "./NoResults";
 import ToastSuccess from "./ToastSuccess";
+import { ReactComponent as EditIcon } from '../components/icons/editIcon.svg';
 
 const Files = ({user, me}) => {
     const [files, setFiles] = useState([]);
@@ -125,7 +126,12 @@ const Files = ({user, me}) => {
                                 {me.rol === 'admin' && (
                                     <div className="col-12 cursor-pointer text-end mt-2">
                                         <Tooltip text="Editar enlace">
-                                            <i className="icon-edit text-info ms-3" onClick={() => handleSetItemToEdit(index)}/>
+                                            <EditIcon
+                                                width={20}
+                                                height={20}
+                                                onClick={() => handleSetItemToEdit(index)}
+                                                fill='#0dcaf0'
+                                            />
                                         </Tooltip>
                                     </div>
                                 )}

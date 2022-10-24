@@ -1,11 +1,13 @@
 @import 'utils/variables';
 @import 'utils/helpers';
 
-@import 'base/typography';
-
 @import 'components/buttons';
 @import 'components/images';
 @import 'components/borders';
 @import 'components/cursors';
 @import 'components/texts';
 @import 'components/cards';
+
+.icon-close:before {
+    content: "\e92c";
+}

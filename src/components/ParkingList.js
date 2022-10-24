@@ -6,6 +6,7 @@ import 'moment/locale/es';
 import {Tooltip} from "./Tooltip";
 import NoResults from "./NoResults";
 import ToastSuccess from "./ToastSuccess";
+import { ReactComponent as CloseIcon } from '../components/icons/closeIcon.svg';
 
 moment.locale('es');
 
@@ -243,11 +244,16 @@ const ParkingList = ({user, me}) => {
                             <div className={"row m-0 mt-2 rounded-full-10px p-2 position-relative " + ((index % 2) ? '' : 'bg-light')} key={index}>
                                 <div className="cursor-pointer position-absolute w-fit-content right-0">
                                     <Tooltip text="Liberar puesto de estacionamiento">
-                                        <i className="icon-close text-danger p-2" onClick={() => {
-                                            remove(ref(db, 'parkingData/' + parkingItem.id)).then(() => {
-                                                setShow(true);
-                                            });
-                                        }}/>
+                                        <CloseIcon
+                                            width={20}
+                                            height={20}
+                                            onClick={() => {
+                                                remove(ref(db, 'parkingData/' + parkingItem.id)).then(() => {
+                                                    setShow(true);
+                                                });
+                                            }}
+                                            fill='#bb2124'
+                                        />
                                     </Tooltip>
                                 </div>
                                 {me.rol === 'admin' && <div className="col d-none d-md-block px-1">{parkingItem.user}</div>}
